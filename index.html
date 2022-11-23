@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Counter</title>
+  <link rel="stylesheet" href="cardcounter.css">
+  <script src="cardcounter.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--------------------COUNTER SECTION-------->
+  <div id="countersSection">
+
+    <div class="counterContainer" id="runningCountContainer">
+      <h2 id="runningCount">0</h2>
+      <h1>Running Count</h1>
+  </div>
+
+    <div class="counterContainer" id="cardsDealtContainer">
+      <h2 id="cardsDealt">0</h2>
+      <h1>Cards Dealt</h1>
+    </div>
+
+    <div class="counterContainer" id="cardsRemainingContainer">
+      <h2 id="cardsRemaining">416</h2>
+      <h1>Cards Remaining</h1>
+    </div>
+
+        <div class="counterContainer" id="trueCountContainer">
+      <h2 id="trueCount">0</h2>
+      <h1>True Count</h1>
+    </div>
+
+  </div>
+
+  <!--------------------STATUS SECTION---------->
+
+  <div id="statusSection">
+    <h1>STATUS:</h1><h1 id="status" style="margin-left: 10px;">MODERATE</h1>
+  </div>
+
+  <!--------------------LOW CARD SECTION--------->
+
+  <div id="buttonsSection">
+
+    <div class="buttonContainer" id="lowCardContainer">
+     
+      <div id="twos">
+
+        <div class="cardContainer">
+          <img id="twoOfSpades"class="playingCards" onclick="lowCard(), minusTwoOfSpades()"  src="cards/2_of_spades.png">
+          <label class="cardLabel" for="twoOfSpades">Remaining:<span id="twoOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="twoOfDiamonds"class="playingCards" onclick="lowCard(), minusTwoOfDiamonds()"  src="cards/2_of_diamonds.png">
+          <label class="cardLabel" for="twoOfDiamonds">Remaining:<span id="twoOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="twoOfClubss"class="playingCards" onclick="lowCard(), minusTwoOfClubs()"  src="cards/2_of_clubs.png">
+          <label class="cardLabel" for="twoOfClubs">Remaining:<span id="twoOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="twoOfHearts"class="playingCards" onclick="lowCard(), minusTwoOfHearts()"  src="cards/2_of_hearts.png">
+          <label class="cardLabel" for="twoOfHearts">Remaining:<span id="twoOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfTwos">7.69%</span></h1>
+
+      </div>
+
+
+      <div id="threes">
+
+        <div class="cardContainer">
+          <img id="threeOfSpades"class="playingCards" onclick="lowCard(), minusThreeOfSpades()"  src="cards/3_of_spades.png">
+          <label class="cardLabel" for="threeOfSpades">Remaining:<span id="threeOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="threeOfDiamonds"class="playingCards" onclick="lowCard(), minusThreeOfDiamonds()"  src="cards/3_of_diamonds.png">
+          <label class="cardLabel" for="threeOfDiamonds">Remaining:<span id="threeOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="threeOfClubss"class="playingCards" onclick="lowCard(), minusThreeOfClubs()"  src="cards/3_of_clubs.png">
+          <label class="cardLabel" for="threeOfClubs">Remaining:<span id="threeOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="threeOfHearts"class="playingCards" onclick="lowCard(), minusThreeOfHearts()"  src="cards/3_of_hearts.png">
+          <label class="cardLabel" for="threeOfHearts">Remaining:<span id="threeOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfThrees">7.69%</span></h1>
+
+      </div>
+
+
+      <div id="fours">
+
+        <div class="cardContainer">
+          <img id="fourOfSpades"class="playingCards" onclick="lowCard(), minusFourOfSpades()"  src="cards/4_of_spades.png">
+          <label class="cardLabel" for="fourOfSpades">Remaining:<span id="fourOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fourOfDiamonds"class="playingCards" onclick="lowCard(), minusFourOfDiamonds()"  src="cards/4_of_diamonds.png">
+          <label class="cardLabel" for="fourOfDiamonds">Remaining:<span id="fourOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fourOfClubss"class="playingCards" onclick="lowCard(), minusFourOfClubs()"  src="cards/4_of_clubs.png">
+          <label class="cardLabel" for="fourOfClubs">Remaining:<span id="fourOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fourOfHearts"class="playingCards" onclick="lowCard(), minusFourOfHearts()"  src="cards/4_of_hearts.png">
+          <label class="cardLabel" for="fourOfHearts">Remaining:<span id="fourOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfFours">7.69%</span></h1>
+      </div>
+
+
+      <div id="fives">
+
+        <div class="cardContainer">
+          <img id="fiveOfSpades"class="playingCards" onclick="lowCard(), minusFiveOfSpades()"  src="cards/5_of_spades.png">
+          <label class="cardLabel" for="fiveOfSpades">Remaining:<span id="fiveOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fiveOfDiamonds"class="playingCards" onclick="lowCard(), minusFiveOfDiamonds()"  src="cards/5_of_diamonds.png">
+          <label class="cardLabel" for="FiveOfDiamonds">Remaining:<span id="fiveOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fiveOfClubss"class="playingCards" onclick="lowCard(), minusFiveOfClubs()"  src="cards/5_of_clubs.png">
+          <label class="cardLabel" for="fiveOfClubs">Remaining:<span id="fiveOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="fiveOfHearts"class="playingCards" onclick="lowCard(), minusFiveOfHearts()"  src="cards/5_of_hearts.png">
+          <label class="cardLabel" for="fiveOfHearts">Remaining:<span id="fiveOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfFives">7.69%</span></h1>
+      </div>
+
+
+      <div id="sixes">
+
+        <div class="cardContainer">
+          <img id="sixOfSpades"class="playingCards" onclick="lowCard(), minusSixOfSpades()"  src="cards/6_of_spades.png">
+          <label class="cardLabel" for="sixOfSpades">Remaining:<span id="sixOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sixOfDiamonds"class="playingCards" onclick="lowCard(), minusSixOfDiamonds()"  src="cards/6_of_diamonds.png">
+          <label class="cardLabel" for="sixOfDiamonds">Remaining:<span id="sixOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sixOfClubss"class="playingCards" onclick="lowCard(), minusSixOfClubs()"  src="cards/6_of_clubs.png">
+          <label class="cardLabel" for="sixOfClubs">Remaining:<span id="sixOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sixOfHearts"class="playingCards" onclick="lowCard(), minusSixOfHearts()"  src="cards/6_of_hearts.png">
+          <label class="cardLabel" for="sixOfHearts">Remaining:<span id="sixOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfSixes">7.69%</span></h1>
+
+      </div>
+
+    </div>
+
+<!--------------------MIDDLE CARD SECTION--->     
+    
+
+    <div class="buttonContainer"  id="middleCardContainer">
+      <div id="sevens">
+
+        <div class="cardContainer">
+          <img id="sevenOfSpades"class="playingCards" onclick="middleCard(), minusSevenOfSpades()"  src="cards/7_of_spades.png">
+          <label class="cardLabel" for="sevenOfSpades">Remaining:<span id="sevenOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sevenOfDiamonds"class="playingCards" onclick="middleCard(), minusSevenOfDiamonds()"  src="cards/7_of_diamonds.png">
+          <label class="cardLabel" for="sevenOfDiamonds">Remaining:<span id="sevenOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sevenOfClubss"class="playingCards" onclick="middleCard(), minusSevenOfClubs()"  src="cards/7_of_clubs.png">
+          <label class="cardLabel" for="sevenOfClubs">Remaining:<span id="sevenOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="sevenOfHearts"class="playingCards" onclick="middleCard(), minusSevenOfHearts()"  src="cards/7_of_hearts.png">
+          <label class="cardLabel" for="sevenOfHearts">Remaining:<span id="sevenOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfSevens">7.69%</span></h1>
+
+      </div>
+
+      <div id="eights">
+
+        <div class="cardContainer">
+          <img id="eightOfSpades"class="playingCards" onclick="middleCard(), minusEightOfSpades()"  src="cards/8_of_spades.png">
+          <label class="cardLabel" for="eightOfSpades">Remaining:<span id="eightOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="eightOfDiamonds"class="playingCards" onclick="middleCard(), minusEightOfDiamonds()"  src="cards/8_of_diamonds.png">
+          <label class="cardLabel" for="eightOfDiamonds">Remaining:<span id="eightOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="eightOfClubss"class="playingCards" onclick="middleCard(), minusEightOfClubs()"  src="cards/8_of_clubs.png">
+          <label class="cardLabel" for="eightOfClubs">Remaining:<span id="eightOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="eightOfHearts"class="playingCards" onclick="middleCard(), minusEightOfHearts()"  src="cards/8_of_hearts.png">
+          <label class="cardLabel" for="eightOfHearts">Remaining:<span id="eightOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfEights">7.69%</span></h1>
+
+      </div>
+
+      <div id="nines">
+
+        <div class="cardContainer">
+          <img id="nineOfSpades"class="playingCards" onclick="middleCard(), minusNineOfSpades()"  src="cards/9_of_spades.png">
+          <label class="cardLabel" for="nineOfSpades">Remaining:<span id="nineOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="nineOfDiamonds"class="playingCards" onclick="middleCard(), minusNineOfDiamonds()"  src="cards/9_of_diamonds.png">
+          <label class="cardLabel" for="nineOfDiamonds">Remaining:<span id="nineOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="nineOfClubss"class="playingCards" onclick="middleCard(), minusNineOfClubs()"  src="cards/9_of_clubs.png">
+          <label class="cardLabel" for="nineOfClubs">Remaining:<span id="nineOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="nineOfHearts"class="playingCards" onclick="middleCard(), minusNineOfHearts()"  src="cards/9_of_hearts.png">
+          <label class="cardLabel" for="nineOfHearts">Remaining:<span id="nineOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfNines">7.69%</span></h1>
+
+      </div>
+
+    </div>
+
+    <!--------------------HIGH CARD SECTION-----> 
+
+    <div class="buttonContainer"  id="highCardContainer">
+
+      <div id="tens">
+
+        <div class="cardContainer">
+          <img id="tenOfSpades"class="playingCards" onclick="highCard(), minusTenOfSpades()"  src="cards/10_of_spades.png">
+          <label class="cardLabel" for="tenOfSpades">Remaining:<span id="tenOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="tenOfDiamonds"class="playingCards" onclick="highCard(), minusTenOfDiamonds()"  src="cards/10_of_diamonds.png">
+          <label class="cardLabel" for="tenOfDiamonds">Remaining:<span id="tenOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="tenOfClubss"class="playingCards" onclick="highCard(), minusTenOfClubs()"  src="cards/10_of_clubs.png">
+          <label class="cardLabel" for="tenOfClubs">Remaining:<span id="tenOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="tenOfHearts"class="playingCards" onclick="highCard(), minusTenOfHearts()"  src="cards/10_of_hearts.png">
+          <label class="cardLabel" for="tenOfHearts">Remaining:<span id="tenOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfTens">7.69%</span></h1>
+
+      </div>
+
+      <div id="jacks">
+
+        <div class="cardContainer">
+          <img id="jackOfSpades"class="playingCards" onclick="highCard(), minusJackOfSpades()"  src="cards/jack_of_spades.png">
+          <label class="cardLabel" for="jackOfSpades">Remaining:<span id="jackOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="jackOfDiamonds"class="playingCards" onclick="highCard(), minusJackOfDiamonds()"  src="cards/jack_of_diamonds.png">
+          <label class="cardLabel" for="jackOfDiamonds">Remaining:<span id="jackOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="jackOfClubss"class="playingCards" onclick="highCard(), minusJackOfClubs()"  src="cards/jack_of_clubs.png">
+          <label class="cardLabel" for="jackOfClubs">Remaining:<span id="jackOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="jackOfHearts"class="playingCards" onclick="highCard(), minusJackOfHearts()"  src="cards/jack_of_hearts.png">
+          <label class="cardLabel" for="jackOfHearts">Remaining:<span id="jackOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfJacks">7.69%</span></h1>
+
+      </div>
+
+      <div id="queens">
+
+        <div class="cardContainer">
+          <img id="queenOfSpades"class="playingCards" onclick="highCard(), minusQueenOfSpades()"  src="cards/queen_of_spades.png">
+          <label class="cardLabel" for="queenOfSpades">Remaining:<span id="queenOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="queenOfDiamonds"class="playingCards" onclick="highCard(), minusQueenOfDiamonds()"  src="cards/queen_of_diamonds.png">
+          <label class="cardLabel" for="queenOfDiamonds">Remaining:<span id="queenOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="queenOfClubss"class="playingCards" onclick="highCard(), minusQueenOfClubs()"  src="cards/queen_of_clubs.png">
+          <label class="cardLabel" for="queenOfClubs">Remaining:<span id="queenOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="queenOfHearts"class="playingCards" onclick="highCard(), minusQueenOfHearts()"  src="cards/queen_of_hearts.png">
+          <label class="cardLabel" for="queenOfHearts">Remaining:<span id="queenOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfQueens">7.69%</span></h1>
+
+      </div>
+
+      <div id="kings">
+
+        <div class="cardContainer">
+          <img id="kingOfSpades"class="playingCards" onclick="highCard(), minusKingOfSpades()"  src="cards/king_of_spades.png">
+          <label class="cardLabel" for="kingOfSpades">Remaining:<span id="kingOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="kingOfDiamonds"class="playingCards" onclick="highCard(), minusKingOfDiamonds()"  src="cards/king_of_diamonds.png">
+          <label class="cardLabel" for="kingOfDiamonds">Remaining:<span id="kingOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="kingOfClubss"class="playingCards" onclick="highCard(), minusKingOfClubs()"  src="cards/king_of_clubs.png">
+          <label class="cardLabel" for="kingOfClubs">Remaining:<span id="kingOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="kingOfHearts"class="playingCards" onclick="highCard(), minusKingOfHearts()"  src="cards/king_of_hearts.png">
+          <label class="cardLabel" for="kingOfHearts">Remaining:<span id="kingOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfKings">7.69%</span></h1>
+
+      </div>
+
+      <div id="aces">
+
+        <div class="cardContainer">
+          <img id="aceOfSpades"class="playingCards" onclick="highCard(), minusAceOfSpades()"  src="cards/ace_of_spades.png">
+          <label class="cardLabel" for="aceOfSpades">Remaining:<span id="aceOfSpadesRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="aceOfDiamonds"class="playingCards" onclick="highCard(), minusAceOfDiamonds()"  src="cards/Ace_of_diamonds.png">
+          <label class="cardLabel" for="AceOfDiamonds">Remaining:<span id="AceOfDiamondsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="aceOfClubss"class="playingCards" onclick="highCard(), minusAceOfClubs()"  src="cards/ace_of_clubs.png">
+          <label class="cardLabel" for="aceOfClubs">Remaining:<span id="aceOfClubsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <div class="cardContainer">
+          <img id="aceOfHearts"class="playingCards" onclick="highCard(), minusAceOfHearts()"  src="cards/ace_of_hearts.png">
+          <label class="cardLabel" for="aceOfHearts">Remaining:<span id="aceOfHeartsRemaining" style="margin-left: 3px;">8</span></label>
+        </div>
+
+        <h1 class="percentageOfCardRemaining"><span id="percentOfAces">7.69%</span></h1>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div id="cardsRemainingSection">
+
+    <div class="cardsRemainingDisplay" id="cardsRemainingSection__lowCards">
+      <h2>Low Cards:</h2><h2 id="lowCardPercentage" style="color: rgb(255, 131, 230);">38.46%</h2><h2></h2>
+    </div>
+
+
+    <div class="cardsRemainingDisplay" id="cardsRemainingSection__middleCards">
+      <h2>Middle Cards:</h2><h2 id="middleCardPercentage" style="color: rgb(255, 131, 230);">23.07%</h2><h2></h2>
+    </div>
+
+    <div class="cardsRemainingDisplay" id="cardsRemainingSection__highCards">
+      <h2>High Cards:</h2><h2 id="highCardPercentage" style="color: rgb(255,131,230);">38.46%</h2><h2></h2>
+    </div>
+
+  </div>
+
+  
+  <button id="newShoe" class="button" onclick="newShoe()">
+    NEW SHOE
+  </button>
+
+  
+
+</body>
+</html>

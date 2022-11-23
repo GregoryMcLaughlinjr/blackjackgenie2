@@ -1,0 +1,162 @@
+html{
+  font-family: 'Cinzel', serif;
+}
+
+body{
+  background-image: url(/images/black.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#countersSection{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.counterContainer{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  color: goldenrod;
+  background: radial-gradient(rgb(54, 54, 54), rgb(32, 32, 32), rgb(0,0,0));
+  border-radius: 20px;
+  margin-right: 50px;
+  box-shadow: 5px -10px 15px -5px rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  height: 140px;
+
+}
+
+.counterContainer h2{
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.counterContainer h1{
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+#statusSection{
+display: flex;
+flex-direction: row;
+width: 300px;
+min-width: 300px;
+background: radial-gradient(rgb(54, 54, 54), rgb(32, 32, 32), rgb(0,0,0));
+justify-content: center;
+border-radius: 20px;
+color: goldenrod;
+margin-top: 10px;
+font-size: 10px;
+}
+
+#status{
+  color: rgb(100, 100, 255);
+}
+
+#buttonsSection{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.playingCards{
+  width: 60px;
+  height: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.playingCards:hover{
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.buttonContainer{
+  width: 475px;
+}
+
+#lowCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.cardLabel{
+  color: goldenrod;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 2px;
+}
+
+#twos, #threes, #fours, #fives, #sixes, #sevens, #eights, #nines, #tens, #jacks, #queens, #kings, #aces{
+  display: flex;
+}
+
+.percentageOfCardRemaining{
+font-weight: bold;
+font-size: 25px;
+color: rgb(255, 131, 230);
+background-color: black;
+height: 35px;
+border-radius: 10px;
+width:70px;
+min-width: 70px;
+max-width: 70px;
+}
+
+#middleCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#highCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button{
+  margin-top: 20px;
+background-color: goldenrod;
+border: none;
+border-radius: 10px;
+box-shadow: 5px -10px 15px -5px rgba(255, 255, 255, 0.1);
+height: 50px;
+width: 140px;
+font-weight: 900;
+}
+
+.cardsRemainingDisplay{
+  display: flex;
+  flex-direction: row;
+  color: goldenrod;
+}
+
+#cardsRemainingSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+}
